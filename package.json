@@ -1,0 +1,15 @@
+{
+  "name": "live-ops-helpdesk",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n SERVER,CLIENT -c blue,magenta \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "node server.js",
+    "dev:client": "npm --prefix client run dev"
+  },
+  "dependencies": {
+    "concurrently": "^9.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
